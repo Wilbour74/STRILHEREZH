@@ -2,12 +2,15 @@ import React from 'react';
 import logo from '../assets/Skornennlogo.png';
 import canette from '../assets/Image1.png';
 import Image2 from '../assets/Image2.jpg';
+import Image3 from '../assets/Image3.jpg';
 import {ReactComponent as Ice1} from '../assets/ice border 1.svg';
 import {ReactComponent as Ice2} from '../assets/ice border 2.svg';
+import CarouselAuto from '../components/Carousel';
+
 
 const Home: React.FC = () => {
   return (
-    <main className="flex flex-col min-h-screen relative">
+    <main className="flex flex-col min-h-screen relative font-noto overflow-x-hidden">
       {/* Section contenant la vidéo en arrière-plan */}
       <section className="relative h-screen">
         <video
@@ -86,19 +89,38 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section style={{ backgroundImage: `url(${Image2})` }} className="bg-cover bg-center">
+      <section style={{ backgroundImage: `url(${Image2})` }} className="bg-cover bg-center bg-fixed brightness-80">
         <Ice1 className="" />
-        <div className='relative flex flex-col items-start mt-40 ml-40 max-w-full'>
+        <div className='relative flex flex-col items-start pt-40 ml-40 max-w-full pb-40'>
             <h1 className='text-white text-[40px] text-left'>Skornenn, cidrier de caractere</h1>
             <div className='text-white text-[15px] mt-10 text-left max-w-2xl'>
-            <p className=''>Au cœur de la Bretagne, terre de légendes et de traditions, la distillerie Skornenn se distingue par son engagement à produire des cidres d'exception. Fondée par des passionnés du terroir breton, Skornenn allie savoir-faire ancestral et innovation moderne pour offrir une gamme de cidres doux et parfumés, disponibles avec et sans alcool, en canette et en bouteille.</p>
-            <p>Les vergers de Skornenn, situés dans les vallons verdoyants de la Bretagne, bénéficient d'un climat tempéré idéal pour la culture des pommes à cidre. Chaque pomme est sélectionnée pour sa qualité et son goût unique, garantissant ainsi un cidre authentique et savoureux.</p>
-            <p>À Skornenn, la production du cidre est un véritable art. Les pommes, récoltées à la main, sont pressées selon des méthodes traditionnelles pour en extraire le meilleur jus. La fermentation est réalisée lentement, permettant de développer des arômes riches et complexes. Cette attention portée à chaque étape de la production assure un cidre doux et parfumé, reflet du terroir breton. (textes générés par Chat GPT)</p>
-            <p>6 NUANCES DE CIDRES</p>
+            <p className='mb-6'>Au cœur de la Bretagne, terre de légendes et de traditions, la distillerie Skornenn se distingue par son engagement à produire des cidres d'exception. Fondée par des passionnés du terroir breton, Skornenn allie savoir-faire ancestral et innovation moderne pour offrir une gamme de cidres doux et parfumés, disponibles avec et sans alcool, en canette et en bouteille.</p>
+            <p className='mb-6'>Les vergers de Skornenn, situés dans les vallons verdoyants de la Bretagne, bénéficient d'un climat tempéré idéal pour la culture des pommes à cidre. Chaque pomme est sélectionnée pour sa qualité et son goût unique, garantissant ainsi un cidre authentique et savoureux.</p>
+            <p className='mb-6'>À Skornenn, la production du cidre est un véritable art. Les pommes, récoltées à la main, sont pressées selon des méthodes traditionnelles pour en extraire le meilleur jus. La fermentation est réalisée lentement, permettant de développer des arômes riches et complexes. Cette attention portée à chaque étape de la production assure un cidre doux et parfumé, reflet du terroir breton. (textes générés par Chat GPT)</p>
+            <p className='mb-12'>6 NUANCES DE CIDRES</p>
+
+            <button className='border-2 border-white px-20 py-3 text-[20px]'>Decouvrir notre histoire</button>
             </div>
         </div>
         <Ice2 className="" />
        </section>
+
+        <section style={{ backgroundImage: `url(${Image3})` }} className="relative flex items-center justify-between p-4">
+        
+        <div className="flex flex-col w-1/2 ml-[200px]">
+            <h1 className="text-3xl font-bold mb-4">Un vent frais pour le cidre breton.</h1>
+            <p className="mb-2">Lorem ipsum dolor sit amet consectetur. Est donec lorem neque ultrices. Bibendum vitae donec augue viverra pulvinar pharetra platea nunc dui. Molestie vel purus porttitor mi eget vel sit orci nunc.</p>
+            <p className="mb-2">Facilisis est egestas enim amet dapibus in malesuada pellentesque. Gravida ornare justo arcu integer habitant tellus. Leo velit tellus convallis interdum orci faucibus. Eleifend pellentesque a odio adipiscing lacinia morbi egestas ornare. Sed ornare fermentum aliquam platea pellentesque eu risus. Eget nisl nulla sagittis scelerisque.</p>
+            <p className="mb-2">Id nec viverra elementum ac. Neque id ante dignissim pellentesque nisl.</p>
+            <p>Habitant in eu ultrices sed. Ut varius libero massa commodo. Vestibulum aenean mattis commodo sagittis amet feugiat urna eget pellentesque.</p>
+        </div>
+        <div className="w-1/2 flex justify-center">
+            <img src={canette} alt="canette" className="h-[480px] w-[487]" />
+        </div>
+        </section>
+        <section>
+            <CarouselAuto></CarouselAuto>
+        </section>
     </main>
   );
 };
