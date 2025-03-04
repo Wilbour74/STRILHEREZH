@@ -9,7 +9,13 @@ import {ReactComponent as Ice3} from '../assets/ice border 3.svg';
 import CarouselAuto from '../components/Carousel';
 import News from '../components/News';
 import Navbar from '../components/Navbar';
-
+import Important from '../components/Important';
+import Background3 from '../assets/background3.jpg';
+import grid1 from '../assets/grid1.png';
+import grid2 from '../assets/grid2.png';
+import grid3 from '../assets/grid3.jpg';
+import grid4 from '../assets/grid4.png';
+import grid5 from '../assets/grid5.jpg';
 
 
 
@@ -69,11 +75,13 @@ const Home: React.FC = () => {
             
             <div className="container flex flex-row items-center justify-center p-0 py-[25px] pt-[40px]">
                 <div className="w-[35%]">
-                    <h1 className="text-[2.5rem] mt-[-40px] mb-10 ">Un vent frais pour le cidre breton.</h1>
-                    <p className="mb-2">Lorem ipsum dolor sit amet consectetur. Est donec lorem neque ultrices. Bibendum vitae donec augue viverra pulvinar pharetra platea nunc dui. Molestie vel purus porttitor mi eget vel sit orci nunc.</p>
-                    <p className="mb-2">Facilisis est egestas enim amet dapibus in malesuada pellentesque. Gravida ornare justo arcu integer habitant tellus. Leo velit tellus convallis interdum orci faucibus. Eleifend pellentesque a odio adipiscing lacinia morbi egestas ornare. Sed ornare fermentum aliquam platea pellentesque eu risus. Eget nisl nulla sagittis scelerisque.</p>
-                    <p className="mb-2">Id nec viverra elementum ac. Neque id ante dignissim pellentesque nisl.</p>
-                    <p>Habitant in eu ultrices sed. Ut varius libero massa commodo. Vestibulum aenean mattis commodo sagittis amet feugiat urna eget pellentesque.</p>
+                    <h1 className="text-[2.5rem] mt-[-40px] mb-10 text-[#87CEFA] ">Un vent frais pour le cidre breton.</h1>
+                    <div className='text-[#6C839A]'>
+                        <p className="mb-2">Lorem ipsum dolor sit amet consectetur. Est donec lorem neque ultrices. Bibendum vitae donec augue viverra pulvinar pharetra platea nunc dui. Molestie vel purus porttitor mi eget vel sit orci nunc.</p>
+                        <p className="mb-2">Facilisis est egestas enim amet dapibus in malesuada pellentesque. Gravida ornare justo arcu integer habitant tellus. Leo velit tellus convallis interdum orci faucibus. Eleifend pellentesque a odio adipiscing lacinia morbi egestas ornare. Sed ornare fermentum aliquam platea pellentesque eu risus. Eget nisl nulla sagittis scelerisque.</p>
+                        <p className="mb-2">Id nec viverra elementum ac. Neque id ante dignissim pellentesque nisl.</p>
+                        <p>Habitant in eu ultrices sed. Ut varius libero massa commodo. Vestibulum aenean mattis commodo sagittis amet feugiat urna eget pellentesque.</p>
+                    </div>
                 </div>
                 <div className="">
                     <img src={canette} alt="canette" className="h-[35.5rem] w-[32rem]" />
@@ -82,11 +90,37 @@ const Home: React.FC = () => {
             
         </section>
         
-        <section>
+        <section >
         <div style={{ position: 'relative' }}>
             <Ice3 style={{ position: 'absolute', zIndex: 2, top: '-10px' }} />
             <CarouselAuto />
         </div>
+        </section>
+        <section style={{ backgroundImage: `url(${Background3})`}}>
+             <Important/>
+        </section>
+
+        <section>
+            <div className='flex flex-row gap-[20px] overflow-x-hidden'>
+                <div className='relative w-[calc(50vw-1.25rem)] h-[50rem] pt-[1.25rem] pl-[1.25rem] pb-[1.25rem] box-border'>
+                    <img src={grid1} className='w-full h-full object-cover'/>
+                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold'>
+                        Texte sur l'image 1
+                    </div>
+                </div>
+                <div className='relative w-[calc(50vw-1.25rem)] h-[50rem] pt-[1.25rem] pr-[1.25rem] pb-[1.25rem] box-border'>
+                    <img src={grid2} className='w-full h-full object-cover' />
+                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold'>
+                        Texte sur l'image 2
+                    </div>
+                </div>
+            </div>
+            <div className='relative w-screen h-[37.5rem] pl-[1.25rem] pr-[2.50rem] box-border'>
+                <img src={grid3} className='w-full h-full object-cover'/>
+                <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold'>
+                        Texte sur l'image 3
+                    </div>
+            </div>
         </section>
     </main>
   );

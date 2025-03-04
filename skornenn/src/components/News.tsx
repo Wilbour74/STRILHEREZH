@@ -7,7 +7,7 @@ const News : React.FC = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 p-2'>
         <div className="border-2 border-gray p-6 mt-6 mx-auto w-[24rem] h-auto relative">
             
-            <div className="flex justify-center items-center relative z-10 ">
+            <div className="flex justify-center items-center relative z-10">
             <p className="absolute top-0 left-0 w-full h-full flex justify-center items-center text-[#6C839A] text-[60px] opacity-20 z-0">
                 CIDRE PARFUME
             </p>
