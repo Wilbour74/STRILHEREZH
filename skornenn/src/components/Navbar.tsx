@@ -2,6 +2,7 @@ import React from "react";
 import logo from '../assets/Skornennlogo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+
 const Navbar: React.FC = () => {
     return (
         <nav className="flex items-center justify-between p-4 bg-gradient-to-b from-white via-white to-transparent fixed top-0 left-0 right-0 z-50">

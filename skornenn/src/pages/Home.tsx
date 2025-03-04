@@ -16,7 +16,7 @@ import grid2 from '../assets/grid2.png';
 import grid3 from '../assets/grid3.jpg';
 import grid4 from '../assets/grid4.png';
 import grid5 from '../assets/grid5.jpg';
-
+import Footer from '../components/Footer';
 
 
 
@@ -104,24 +104,45 @@ const Home: React.FC = () => {
             <div className='flex flex-row gap-[20px] overflow-x-hidden'>
                 <div className='relative w-[calc(50vw-1.25rem)] h-[50rem] pt-[1.25rem] pl-[1.25rem] pb-[1.25rem] box-border'>
                     <img src={grid1} className='w-full h-full object-cover'/>
-                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold'>
-                        Texte sur l'image 1
+                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold flex flex-col'>
+                        <h1>Cidre parfumé</h1>
+                        <button className='mt-6 text-[13px] border-2 px-[70px]'>Découvrir la séléction</button> 
                     </div>
+                    
                 </div>
                 <div className='relative w-[calc(50vw-1.25rem)] h-[50rem] pt-[1.25rem] pr-[1.25rem] pb-[1.25rem] box-border'>
                     <img src={grid2} className='w-full h-full object-cover' />
-                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold'>
-                        Texte sur l'image 2
+                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold flex flex-col'>
+                        <h1>Cidre parfumé</h1>
+                        <button className='mt-6 text-[13px] border-2 px-[70px]'>Découvrir la séléction</button> 
                     </div>
                 </div>
             </div>
             <div className='relative w-screen h-[37.5rem] pl-[1.25rem] pr-[2.50rem] box-border'>
                 <img src={grid3} className='w-full h-full object-cover'/>
-                <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold'>
-                        Texte sur l'image 3
+                <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold flex flex-col'>
+                    <h1>Cidre parfumé</h1>
+                    <button className='mt-6 text-[13px] border-2 px-[70px]'>Découvrir la séléction</button> 
+                </div>
+            </div>
+            <div className='flex flex-row gap-[20px] overflow-x-hidden'>
+                <div className='relative w-[calc(50vw-1.25rem)] h-[50rem] pt-[1.25rem] pl-[1.25rem] pb-[1.25rem] box-border'>
+                    <img src={grid4} className='w-full h-full object-cover'/>
+                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold flex flex-col'>
+                        <h1>Cidre parfumé</h1>
+                        <button className='mt-6 text-[13px] border-2 px-[70px]'>Découvrir la séléction</button> 
                     </div>
+                </div>
+                <div className='relative w-[calc(50vw-1.25rem)] h-[50rem] pt-[1.25rem] pr-[1.25rem] pb-[1.25rem] box-border'>
+                    <img src={grid5} className='w-full h-full object-cover' />
+                    <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-3xl font-bold flex flex-col'>
+                        <h1>Cidre parfumé</h1>
+                        <button className='mt-6 text-[13px] border-2 px-[70px]'>Découvrir la séléction</button> 
+                    </div>
+                </div>
             </div>
         </section>
+        <Footer/>
     </main>
   );
 };
