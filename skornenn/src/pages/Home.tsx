@@ -2,31 +2,24 @@ import React from 'react';
 import logo from '../assets/Skornennlogo.png';
 import canette from '../assets/Image1.png';
 import Image2 from '../assets/Image2.jpg';
-import Image3 from '../assets/Image3.jpg';
+import Image3 from '../assets/Image3.png';
 import {ReactComponent as Ice1} from '../assets/ice border 1.svg';
 import {ReactComponent as Ice2} from '../assets/ice border 2.svg';
 import {ReactComponent as Ice3} from '../assets/ice border 3.svg';
 import CarouselAuto from '../components/Carousel';
-import Frame1 from '../assets/frame1.png';
-import Frame2 from '../assets/frame2.png';
-import Frame3 from '../assets/frame3.png';
-import Frame4 from '../assets/frame4.png';
-import Frame5 from '../assets/frame5.png';
+import News from '../components/News';
+import Navbar from '../components/Navbar';
+
 
 
 
 
 
 const Home: React.FC = () => {
-    let slides = [
-        Frame1,
-        Frame2,
-        Frame3,
-        Frame4,
-        Frame5,
-    ]
   return (
+    
     <main className="flex flex-col min-h-screen relative font-noto overflow-x-hidden">
+      <Navbar/>
       {/* Section contenant la vidéo en arrière-plan */}
       <section className="relative h-screen">
         <video
@@ -52,92 +45,48 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className='relative bg-white bg-opcaity-80 z-20 m-0 pb-40'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <div className='border-2 p-6 mt-6 mx-auto'>
-            <div className='flex justify-center items-center'>
-                <img src={canette} className='h-48 w-96 object-scale-down' alt="Canette Oranges Sanguines" />
-            </div>
-            <h2 className='text-[#87CEFA]'>Canette Oranges Sanguines</h2>
-            <p>Lorem ipsum dolor sit amet consecteutur. Orci vitae platea non leo lobortis lacus diam elit nibh. Condimentum velit amet amet in tempus. Arcu felis elit accumsan rutrum non pharertra. Donec netus integer magna rhoncus tellus.</p>
-            <p>1.70€ / 33CL</p>
-        </div>
-        <div className='border-2 p-6 mt-6 mx-auto'>
-            <div className='flex justify-center items-center'>
-                <img src={canette} className='h-48 w-96 object-scale-down' alt="Canette Oranges Sanguines" />
-            </div>
-            <h2 className='text-[#87CEFA]'>Canette Oranges Sanguines</h2>
-            <p>Lorem ipsum dolor sit amet consecteutur. Orci vitae platea non leo lobortis lacus diam elit nibh. Condimentum velit amet amet in tempus. Arcu felis elit accumsan rutrum non pharertra. Donec netus integer magna rhoncus tellus.</p>
-            <p>1.70€ / 33CL</p>
-        </div>
-        <div className='border-2 p-6 mt-6 mx-auto'>
-            <div className='flex justify-center items-center'>
-                <img src={canette} className='h-48 w-96 object-scale-down' alt="Canette Oranges Sanguines" />
-            </div>
-            <h2 className='text-[#87CEFA]'>Canette Oranges Sanguines</h2>
-            <p>Lorem ipsum dolor sit amet consecteutur. Orci vitae platea non leo lobortis lacus diam elit nibh. Condimentum velit amet amet in tempus. Arcu felis elit accumsan rutrum non pharertra. Donec netus integer magna rhoncus tellus.</p>
-            <p>1.70€ / 33CL</p>
-        </div>
-        <div className='border-2 p-6 mt-6 mx-auto'>
-            <div className='flex justify-center items-center'>
-                <img src={canette} className='h-48 w-96 object-scale-down' alt="Canette Oranges Sanguines" />
-            </div>
-            <h2 className='text-[#87CEFA]'>Canette Oranges Sanguines</h2>
-            <p>Lorem ipsum dolor sit amet consecteutur. Orci vitae platea non leo lobortis lacus diam elit nibh. Condimentum velit amet amet in tempus. Arcu felis elit accumsan rutrum non pharertra. Donec netus integer magna rhoncus tellus.</p>
-            <p>1.70€ / 33CL</p>
-        </div>
-        <div className='border-2 p-6 mt-6 mx-auto'>
-            <div className='flex justify-center items-center'>
-                <img src={canette} className='h-48 w-96 object-scale-down' alt="Canette Oranges Sanguines" />
-            </div>
-            <h2 className='text-[#87CEFA]'>Canette Oranges Sanguines</h2>
-            <p>Lorem ipsum dolor sit amet consecteutur. Orci vitae platea non leo lobortis lacus diam elit nibh. Condimentum velit amet amet in tempus. Arcu felis elit accumsan rutrum non pharertra. Donec netus integer magna rhoncus tellus.</p>
-            <p>1.70€ / 33CL</p>
-        </div>
-        <div className='border-2 p-6 mt-6 mx-auto'>
-            <div className='flex justify-center items-center'>
-                <img src={canette} className='h-48 w-96 object-scale-down' alt="Canette Oranges Sanguines" />
-            </div>
-            <h2 className='text-[#87CEFA]'>Canette Oranges Sanguines</h2>
-            <p>Lorem ipsum dolor sit amet consecteutur. Orci vitae platea non leo lobortis lacus diam elit nibh. Condimentum velit amet amet in tempus. Arcu felis elit accumsan rutrum non pharertra. Donec netus integer magna rhoncus tellus.</p>
-            <p>1.70€ / 33CL</p>
-        </div>
-        </div>
+      <section className='relative bg-[##eeeee4] bg-opcaity-80 z-20 m-0 pb-40'>
+        <News/>
       </section>
 
-      <section style={{ backgroundImage: `url(${Image2})` }} className="bg-cover bg-center bg-fixed brightness-80">
-        <Ice1 className="" />
-        <div className='relative flex flex-col items-start pt-40 ml-40 max-w-full pb-40'>
-            <h1 className='text-white text-[40px] text-left'>Skornenn, cidrier de caractere</h1>
-            <div className='text-white text-[15px] mt-10 text-left max-w-2xl'>
-            <p className='mb-6'>Au cœur de la Bretagne, terre de légendes et de traditions, la distillerie Skornenn se distingue par son engagement à produire des cidres d'exception. Fondée par des passionnés du terroir breton, Skornenn allie savoir-faire ancestral et innovation moderne pour offrir une gamme de cidres doux et parfumés, disponibles avec et sans alcool, en canette et en bouteille.</p>
-            <p className='mb-6'>Les vergers de Skornenn, situés dans les vallons verdoyants de la Bretagne, bénéficient d'un climat tempéré idéal pour la culture des pommes à cidre. Chaque pomme est sélectionnée pour sa qualité et son goût unique, garantissant ainsi un cidre authentique et savoureux.</p>
-            <p className='mb-6'>À Skornenn, la production du cidre est un véritable art. Les pommes, récoltées à la main, sont pressées selon des méthodes traditionnelles pour en extraire le meilleur jus. La fermentation est réalisée lentement, permettant de développer des arômes riches et complexes. Cette attention portée à chaque étape de la production assure un cidre doux et parfumé, reflet du terroir breton. (textes générés par Chat GPT)</p>
-            <p className='mb-12'>6 NUANCES DE CIDRES</p>
+      <section style={{ backgroundImage: `url(${Image2})` }} className="bg-cover bg-center bg-fixed">
+            <Ice1 className="" />
+            <div className='relative flex flex-col items-start pt-[15rem] ml-[7.5rem] max-w-full pb-[17.5rem]'>
+                <h1 className='text-white text-[2.5rem] text-left'>Skornenn, cidrier de caractere</h1>
+                <div className='text-white text-[0.9375rem] mt-[0.625rem] text-left max-w-2xl'>
+                    <p className='mb-[1.5rem]'>Au cœur de la Bretagne, terre de légendes et de traditions, la distillerie Skornenn se distingue par son engagement à produire des cidres d'exception. Fondée par des passionnés du terroir breton, Skornenn allie savoir-faire ancestral et innovation moderne pour offrir une gamme de cidres doux et parfumés, disponibles avec et sans alcool, en canette et en bouteille.</p>
+                    <p className='mb-[1.5rem]'>Les vergers de Skornenn, situés dans les vallons verdoyants de la Bretagne, bénéficient d'un climat tempéré idéal pour la culture des pommes à cidre. Chaque pomme est sélectionnée pour sa qualité et son goût unique, garantissant ainsi un cidre authentique et savoureux.</p>
+                    <p className='mb-[1.5rem]'>À Skornenn, la production du cidre est un véritable art. Les pommes, récoltées à la main, sont pressées selon des méthodes traditionnelles pour en extraire le meilleur jus. La fermentation est réalisée lentement, permettant de développer des arômes riches et complexes. Cette attention portée à chaque étape de la production assure un cidre doux et parfumé, reflet du terroir breton. (textes générés par Chat GPT)</p>
+                    <p className='mb-[2rem]'>6 NUANCES DE CIDRES</p>
 
-            <button className='border-2 border-white px-20 py-3 text-[20px]'>Decouvrir notre histoire</button>
+                    <button className='border-2 border-white px-[5rem] py-[0.75rem] text-[1.25rem]'>Decouvrir notre histoire</button>
+                </div>
             </div>
-        </div>
-        <Ice2 className="" />
-       </section>
-
-        <section style={{ backgroundImage: `url(${Image3})` }} className="relative flex items-center justify-between p-4">
-        
-        <div className="flex flex-col w-1/2 ml-[200px]">
-            <h1 className="text-3xl font-bold mb-4">Un vent frais pour le cidre breton.</h1>
-            <p className="mb-2">Lorem ipsum dolor sit amet consectetur. Est donec lorem neque ultrices. Bibendum vitae donec augue viverra pulvinar pharetra platea nunc dui. Molestie vel purus porttitor mi eget vel sit orci nunc.</p>
-            <p className="mb-2">Facilisis est egestas enim amet dapibus in malesuada pellentesque. Gravida ornare justo arcu integer habitant tellus. Leo velit tellus convallis interdum orci faucibus. Eleifend pellentesque a odio adipiscing lacinia morbi egestas ornare. Sed ornare fermentum aliquam platea pellentesque eu risus. Eget nisl nulla sagittis scelerisque.</p>
-            <p className="mb-2">Id nec viverra elementum ac. Neque id ante dignissim pellentesque nisl.</p>
-            <p>Habitant in eu ultrices sed. Ut varius libero massa commodo. Vestibulum aenean mattis commodo sagittis amet feugiat urna eget pellentesque.</p>
-        </div>
-        <div className="w-1/2 flex justify-center">
-            <img src={canette} alt="canette" className="h-[480px] w-[487]" />
-        </div>
+            <Ice2 className="m-0 p-0" />
         </section>
-        <section>
-            <div className='w-[100%]' >
-                <CarouselAuto/>
+
+        <section style={{ backgroundImage: `url(${Image3})` }} className="relative flex items-center justify-center p-4 py-[17.25rem]">
+            
+            <div className="container flex flex-row items-center justify-center p-0 py-[25px] pt-[40px]">
+                <div className="w-[35%]">
+                    <h1 className="text-[2.5rem] mt-[-40px] mb-10 ">Un vent frais pour le cidre breton.</h1>
+                    <p className="mb-2">Lorem ipsum dolor sit amet consectetur. Est donec lorem neque ultrices. Bibendum vitae donec augue viverra pulvinar pharetra platea nunc dui. Molestie vel purus porttitor mi eget vel sit orci nunc.</p>
+                    <p className="mb-2">Facilisis est egestas enim amet dapibus in malesuada pellentesque. Gravida ornare justo arcu integer habitant tellus. Leo velit tellus convallis interdum orci faucibus. Eleifend pellentesque a odio adipiscing lacinia morbi egestas ornare. Sed ornare fermentum aliquam platea pellentesque eu risus. Eget nisl nulla sagittis scelerisque.</p>
+                    <p className="mb-2">Id nec viverra elementum ac. Neque id ante dignissim pellentesque nisl.</p>
+                    <p>Habitant in eu ultrices sed. Ut varius libero massa commodo. Vestibulum aenean mattis commodo sagittis amet feugiat urna eget pellentesque.</p>
+                </div>
+                <div className="">
+                    <img src={canette} alt="canette" className="h-[35.5rem] w-[32rem]" />
+                </div>
             </div>
+            
+        </section>
+        
+        <section>
+        <div style={{ position: 'relative' }}>
+            <Ice3 style={{ position: 'absolute', zIndex: 2, top: '-10px' }} />
+            <CarouselAuto />
+        </div>
         </section>
     </main>
   );
