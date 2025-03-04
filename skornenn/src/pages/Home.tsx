@@ -5,16 +5,32 @@ import Image2 from '../assets/Image2.jpg';
 import Image3 from '../assets/Image3.jpg';
 import {ReactComponent as Ice1} from '../assets/ice border 1.svg';
 import {ReactComponent as Ice2} from '../assets/ice border 2.svg';
+import {ReactComponent as Ice3} from '../assets/ice border 3.svg';
 import CarouselAuto from '../components/Carousel';
+import Frame1 from '../assets/frame1.png';
+import Frame2 from '../assets/frame2.png';
+import Frame3 from '../assets/frame3.png';
+import Frame4 from '../assets/frame4.png';
+import Frame5 from '../assets/frame5.png';
+
+
+
 
 
 const Home: React.FC = () => {
+    let slides = [
+        Frame1,
+        Frame2,
+        Frame3,
+        Frame4,
+        Frame5,
+    ]
   return (
     <main className="flex flex-col min-h-screen relative font-noto overflow-x-hidden">
       {/* Section contenant la vidéo en arrière-plan */}
       <section className="relative h-screen">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover brightness-50"
+          className="absolute top-0 left-0 w-full h-full object-cover brightness-50 bg-fixed"
           src="https://s3-figma-videos-production-sig.figma.com/video/1293519332723811622/TEAM/1145/fcea/-fe1c-42e8-bf38-2ef4115ecc3e?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Ns-CqKQUDxivd~YjB0p2IXAezHYBgUSBAPzpzvshuumwliWT0E9~jy4725HAmayHEAie7DB7hC~eIe41lMJcqWE~1EMf6IERZtLGhD7bVYTQAUbf6Vp3PsspnOeB7bNSdTwFvrPGcfLxBdTj-Qss3TmId1g87dm8twFzo4Q0RGJ6OpAv2CSPcbdbULFZkjSdNXShC4SvVXh5szt7MLLoezPi3lMJzZAwgMQuLJ18tZMWuxn23x0N2EjgO1B~LZHMFHzVjf7Xl8MNg3PiklN03T9SMVgIhLkvsKMbrw1gn~BK5VD7U2f2Uge0VZFtTea4ghYlpGNOkdFpCTLQe6Losg__"
           autoPlay
           loop
@@ -119,7 +135,9 @@ const Home: React.FC = () => {
         </div>
         </section>
         <section>
-            <CarouselAuto></CarouselAuto>
+            <div className='w-[100%]' >
+                <CarouselAuto/>
+            </div>
         </section>
     </main>
   );
